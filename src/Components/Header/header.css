@@ -1,0 +1,56 @@
+.navbar .logo{
+   width: 100px;
+   margin-left: 50px;
+}
+.navbar .header{
+   margin-top: -10px;
+   
+ }
+ .navbar .headerButtons{
+    margin-left: 20%;
+ }
+ .infodiv{
+    display: grid;
+ }
+ .infodiv a{
+    text-decoration: none;
+    text-align: left;
+    font-weight: bold;
+    color: rgb(37, 129, 234);
+ }
+ .infodiv h4{
+   
+    text-align: left;
+ }
+
+ #loginModel .login-btns{
+    display: flex;
+   margin-left: 30%;
+   width: 300px;
+  }
+  #loginModel .login-btns button{
+  width: 130px;
+  margin-left: 10px;
+   
+  }
+  
+  #loginModel .model-buttons{
+    display: flex;
+    margin: 10px;
+  }
+  #loginModel .btn-close{
+    margin-left: 40px;
+  }
+  
+  /* Booking Model Start */
+
+.bookmodel{
+    max-width: 100% !important;
+    margin-top: 80px ;
+    
+}
+.infoModel{
+    max-width: 100% !important;
+    margin-top: 80px ;
+}
+  /* Booking Model End */

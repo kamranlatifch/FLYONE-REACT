@@ -1,0 +1,89 @@
+.search-section{
+    margin-top: -150px;
+    z-index:1;
+    position: relative;
+}
+.search-section button{
+    width: 100px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    height: 40px;
+    width: 140px;
+    border-radius: 0;
+  }
+  .search-section #btn1{
+   border-bottom-left-radius: 5px;
+   border-top-left-radius: 5px;
+  }
+  .search-section #btn6{
+   border-bottom-right-radius: 5px;
+   border-top-right-radius: 5px;
+  }
+  
+  .search-below .searc-input-fields{
+ 
+    height: 100px;
+    margin-top: 20px;
+   }
+   .searc-input-fields input{
+    width: 110px;
+    height: 50px;
+    border-radius: 5px;
+    border: none;
+    margin: 2px;
+   }
+   .searc-input-fields select{
+    width: 110px;
+    height: 50px;
+   }
+   .searc-input-fields button{
+    width: 110px;
+    height: 50px;
+    background-color: rgb(87, 87, 235);
+    border-radius: 10px;
+   }
+  @media (max-width: 768px) { 
+   .search-section{
+     /* justify-content: center; */
+    
+    
+   
+   margin-top: 0;
+ margin-right: 0;
+   position: relative;
+  }
+  .navbar .navbar-brand{
+   margin-left: 50%;
+  }
+  .search-section button{
+   width: 50px;
+   background-color: rgba(157, 165, 168, 0.5);
+   border: 1px solid rgb(84, 80, 80);
+   height: 20px;
+   width: 90px;
+   font-size: 10px;
+   margin-top: 20px;
+   
+ }
+ 
+ .search-below .searc-input-fields{
+  display: grid;
+   height: auto !important;
+  
+   margin-top: 20px;
+   border-radius: 10px;
+  }
+  .searc-input-fields input{
+ 
+   display: grid;
+   width: 100% !important;
+   
+  }
+  .searc-input-fields select{
+   width: 100% !important;
+  }
+  .searc-input-fields button{
+   width: 100% !important;
+   
+  }
+}

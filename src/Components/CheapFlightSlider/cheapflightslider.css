@@ -1,0 +1,32 @@
+
+ .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height: 15%;
+    transition: .5s ease;
+  }
+  .flight-card:hover .overlay {
+    height: 30%;
+  }
+  .flight-card .card{
+    border-radius: 40px;
+  }
+  .flight-card .card img{
+    border-radius: 10px;
+  }
+  .flight-card .card .overlay{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+  .cheap-flight-card{
+    justify-content: space-between;
+   height: 50px;
+   margin-top: -10px;
+   background-color: aliceblue;
+    
+  }

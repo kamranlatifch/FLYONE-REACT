@@ -1,0 +1,90 @@
+
+.additional-divs{
+    background: url('../Images/Main/4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+   display: grid;
+   
+    border-radius: 5px;
+  
+    
+  }
+  .box-2{
+    display: grid;
+  }
+  .box-3{
+    display: grid;
+  }
+  .box-4{
+    display: grid;
+  }
+  .box-2 button{
+    height: 40px;
+   margin-top: 60px;
+   justify-items: center;
+  
+   
+   }
+   .box-3 button{
+    height: 40px;
+    
+   margin-top: 60px;
+   justify-items: center;
+  
+   
+   }
+   .box-4 button{
+    height: 40px;
+   margin-top: 280px;
+   width: 100%;
+   
+  
+   
+   }
+  .additional-divs button{
+   height: 40px;
+  margin-top: 60px;
+  justify-items: center;
+ 
+  
+  }
+  .additional-divs .tags{
+    justify-content: space-between;
+  }
+.add-services .box-2{
+  background: url('../Images/Main/5.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  border-radius: 5px;
+}
+.box-2 .tags{
+  justify-content: space-between;
+}
+.box-3 .tags{
+  justify-content: space-between;
+}
+.add-services .box-3{
+  background: url('../Images/Main/6.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+  border-radius: 5px;
+}
+.add-services .box-4{
+  background: url('../Images/Main/7.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+  border-radius: 5px;
+}
+ .add-services {
+  font-size: large;
+  font-weight: bold;
+ }
+ .add-services button{
+  font-size: large;
+  font-weight: bold;
+ 
+ }

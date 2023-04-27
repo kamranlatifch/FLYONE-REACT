@@ -1,0 +1,30 @@
+.all-services .services{
+  
+    text-align: left;
+    
+  }
+  .all-services  a{
+  
+    text-decoration: none;
+    color: rgb(16, 16, 16);
+  }
+  .all-services .services-left-div{
+    overflow-y: hidden;
+    width: 110%;
+    border-radius: 5px;
+  }
+  .services-left-div .services{
+    margin-left: 20px;
+    font-weight: bold;
+    
+  }
+  #howToBookDiv{
+    display: grid;
+    font-weight: normal;
+
+  }
+  #beforeFlightsDiv{
+    display: grid;
+    font-weight: normal;
+
+  }

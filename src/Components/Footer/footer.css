@@ -1,0 +1,35 @@
+.footer a{
+    text-decoration: none;
+    color: rgb(109, 157, 211);
+  }
+  .footer a:hover{
+    text-decoration-line: underline;
+   
+  }
+  
+  #bookingModel a{
+    text-decoration: none;
+    color: rgb(68, 172, 209);
+  }
+  #infoModel a{
+  text-decoration: none;
+  color: rgb(68, 172, 209);
+  }
+  #loginModel .login-btns{
+    display: flex;
+   margin-left: 30%;
+   width: 300px;
+  }
+  #loginModel .login-btns button{
+  width: 130px;
+  margin-left: 10px;
+   
+  }
+  
+  #loginModel .model-buttons{
+    display: flex;
+    margin: 10px;
+  }
+  #loginModel .btn-close{
+    margin-left: 40px;
+  }

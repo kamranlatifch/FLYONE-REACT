@@ -11,6 +11,18 @@ import lateCI from "./servicesImages/lateCIfee.svg";
 import baordingpass from "./servicesImages/bordingprintfee.svg";
 import prionotification from "./servicesImages/prnotification.svg";
 import lostbaggage from "./servicesImages/baggagegurantee.svg";
+import baggageprio from "./servicesImages/baggagepriority.svg";
+import ontimeguarantee from "./servicesImages/ontimeguarantee.svg";
+import changeflex from "./servicesImages/changeflex.svg";
+import lockfare from "./servicesImages/lockfare.svg";
+import addname from "./servicesImages/addnamelater.svg";
+import namechange from "./servicesImages/namechangefee.svg";
+import giftvoucher from "./servicesImages/giftvoucher.svg";
+import itsms from "./servicesImages/itinerarysms.svg";
+import extraseat from "./servicesImages/extrasheet.svg";
+import stroller from "./servicesImages/stroller.svg";
+import callcenterfee from "./servicesImages/callcenterfee.svg";
+import admissionfee from "./servicesImages/admissionfee.svg";
 function TotalServices() {
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
@@ -747,483 +759,835 @@ function TotalServices() {
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="baggagePrio()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor:
+                showingDiv === "baggageprio" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "baggageprio" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "baggageprio" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("baggageprio");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img
-                src="images/AllServices/baggagegurantee.svg"
-                alt=""
-                width="50px"
-              />
-              <h6 className="my-3 mx-2">Baggage priority</h6>
+              <img src={baggageprio} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "baggageprio"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Baggage priority
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "baggageprio" && (
+                <i className="fa fa-caret-down"></i>
+              )}
+              {showingDiv === "baggageprio" && (
+                <i className="fa fa-caret-up"></i>
+              )}
             </div>
           </div>
-          <div
-            id="services-data-toggle10"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>There is no need to wait in long queues!</p>
-            <p>
-              With baggage priority service your baggage will arrive first on
-              the baggage carousel.
-            </p>
-          </div>
+          {showingDiv === "baggageprio" && (
+            <div
+              id="services-data-toggle10"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>There is no need to wait in long queues!</p>
+              <p>
+                With baggage priority service your baggage will arrive first on
+                the baggage carousel.
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="ontimeGuarantee()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor:
+                showingDiv === "ontimeguarantee" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "ontimeguarantee" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "ontimeguarantee" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("ontimeguarantee");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img
-                src="images/AllServices/ontimeguarantee.svg"
-                alt=""
-                width="50px"
-              />
-              <h6 className="my-3 mx-2">Ontime Guarantee</h6>
+              <img src={ontimeguarantee} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "ontimeguarantee"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Ontime Guarantee
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "ontimeguarantee" && (
+                <i className="fa fa-caret-down"></i>
+              )}
+              {showingDiv === "ontimeguarantee" && (
+                <i className="fa fa-caret-up"></i>
+              )}
             </div>
           </div>
-          <div
-            id="services-data-toggle11"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>
-              Delayed flight or cancelled flight? <br />
-              You get a reward up to 100 EUR. <br />
-              <br />
-            </p>
-            <p>
-              <b>Delayed flight:</b> payment compensation of 15 EUR per hour
-              starting with the sixth hour of delay.
-            </p>
-            <p>
-              <b>Cancelled flight:</b> payment of documented expenses during the
-              period of delay for hotel accommodation within the limits of 70
-              EUR and documented expenses for meals up to 23 EUR during the
-              delay period.
-            </p>
-          </div>
+          {showingDiv === "ontimeguarantee" && (
+            <div
+              id="services-data-toggle11"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>
+                Delayed flight or cancelled flight? <br />
+                You get a reward up to 100 EUR. <br />
+                <br />
+              </p>
+              <p>
+                <b>Delayed flight:</b> payment compensation of 15 EUR per hour
+                starting with the sixth hour of delay.
+              </p>
+              <p>
+                <b>Cancelled flight:</b> payment of documented expenses during
+                the period of delay for hotel accommodation within the limits of
+                70 EUR and documented expenses for meals up to 23 EUR during the
+                delay period.
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="changeFlex()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor:
+                showingDiv === "changeflex" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "changeflex" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "changeflex" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("changeflex");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img
-                src="images/AllServices/changeflex.svg"
-                alt=""
-                width="50px"
-              />
-              <h6 className="my-3 mx-2">Change Flex</h6>
+              <img src={changeflex} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "changeflex"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Change Flex
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "changeflex" && (
+                <i className="fa fa-caret-down"></i>
+              )}
+              {showingDiv === "changeflex" && (
+                <i className="fa fa-caret-up"></i>
+              )}
             </div>
           </div>
-          <div
-            id="services-data-toggle12"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>
-              <b> Have you changed your travel plans?</b> <br />
-              <br />
-            </p>
-            <p>Have you changed your travel plans?</p>
-          </div>
+          {showingDiv === "changeflex" && (
+            <div
+              id="services-data-toggle12"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>
+                <b> Have you changed your travel plans?</b> <br />
+                <br />
+              </p>
+              <p>Have you changed your travel plans?</p>
+            </div>
+          )}
         </div>
 
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="lockFare()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor: showingDiv === "lockfare" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "lockfare" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "lockfare" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("lockfare");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img src="images/AllServices/lockfare.svg" alt="" width="50px" />
-              <h6 className="my-3 mx-2">Lock fare</h6>
+              <img src={lockfare} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "lockfare"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Lock fare
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "lockfare" && (
+                <i className="fa fa-caret-down"></i>
+              )}
+              {showingDiv === "lockfare" && <i className="fa fa-caret-up"></i>}
             </div>
           </div>
-          <div
-            id="services-data-toggle13"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>Need more time to decide?</p>
-            <p>
-              With the Lock Fare service you can block the fare and we can hold
-              it from 48 hours up to 6 days before the scheduled flight
-              departure.
-            </p>
-          </div>
+          {showingDiv === "lockfare" && (
+            <div
+              id="services-data-toggle13"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>Need more time to decide?</p>
+              <p>
+                With the Lock Fare service you can block the fare and we can
+                hold it from 48 hours up to 6 days before the scheduled flight
+                departure.
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="addNameLater()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor: showingDiv === "addname" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "addname" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "addname" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("addname");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img
-                src="images/AllServices/addnamelater.svg"
-                alt=""
-                width="50px"
-              />
-              <h6 className="my-3 mx-2">Add name later</h6>
+              <img src={addname} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "addname"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Add name later
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "addname" && <i className="fa fa-caret-down"></i>}
+              {showingDiv === "addname" && <i className="fa fa-caret-up"></i>}
             </div>
           </div>
-          <div
-            id="services-data-toggle14"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>Not sure who are you going to travel with?</p>
-            <p>Book now and add the name later.</p>
-          </div>
+          {showingDiv === "addname" && (
+            <div
+              id="services-data-toggle14"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>Not sure who are you going to travel with?</p>
+              <p>Book now and add the name later.</p>
+            </div>
+          )}
         </div>
 
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="namechangeFee()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor:
+                showingDiv === "namechange" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "namechange" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "namechange" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("namechange");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img
-                src="images/AllServices/giftvoucher.svg"
-                alt=""
-                width="50px"
-              />
-              <h6 className="my-3 mx-2">Name change fee</h6>
+              <img src={namechange} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "namechange"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Name change fee
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "namechange" && (
+                <i className="fa fa-caret-down"></i>
+              )}
+              {showingDiv === "namechange" && (
+                <i className="fa fa-caret-up"></i>
+              )}
             </div>
           </div>
-          <div
-            id="services-data-toggle15"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>
-              Have your travel plans changed? <br />
-              <br />
-            </p>
-            <p>
-              No need to worry. Access MyBookings and change the passenger name
-              from the booking. <br />
-              <br />
-            </p>
-            <p>
-              Service cost – 60 EURO per flight. <br />
-              <br />
-            </p>
-            <p>
-              <b>
-                *The name correction/change cannot be applied to a partially
-                used ticket.
-              </b>
-            </p>
-          </div>
+          {showingDiv === "namechange" && (
+            <div
+              id="services-data-toggle15"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>
+                Have your travel plans changed? <br />
+                <br />
+              </p>
+              <p>
+                No need to worry. Access MyBookings and change the passenger
+                name from the booking. <br />
+                <br />
+              </p>
+              <p>
+                Service cost – 60 EURO per flight. <br />
+                <br />
+              </p>
+              <p>
+                <b>
+                  *The name correction/change cannot be applied to a partially
+                  used ticket.
+                </b>
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="giftVoucher()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor:
+                showingDiv === "giftvoucher" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "giftvoucher" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "giftvoucher" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("giftvoucher");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img
-                src="images/AllServices/giftvoucher.svg"
-                alt=""
-                width="50px"
-              />
-              <h6 className="my-3 mx-2">Gift voucher</h6>
+              <img src={giftvoucher} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "giftvoucher"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Gift voucher
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "giftvoucher" && (
+                <i className="fa fa-caret-down"></i>
+              )}
+              {showingDiv === "giftvoucher" && (
+                <i className="fa fa-caret-up"></i>
+              )}
             </div>
           </div>
-          <div
-            id="services-data-toggle16"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>
-              Are you looking for a special gift? <br />
-              <br />
-            </p>
-            <p>
-              You can choose one of the gift vouchers and the person who gets it
-              will have the possibility to choose the best holiday destination.
-            </p>
-          </div>
+          {showingDiv === "giftvoucher" && (
+            <div
+              id="services-data-toggle16"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>
+                Are you looking for a special gift? <br />
+                <br />
+              </p>
+              <p>
+                You can choose one of the gift vouchers and the person who gets
+                it will have the possibility to choose the best holiday
+                destination.
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="itSMS()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor: showingDiv === "itsms" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "itsms" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "itsms" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("itsms");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img
-                src="images/AllServices/itinerarysms.svg"
-                alt=""
-                width="50px"
-              />
-              <h6 className="my-3 mx-2">Itenarary by sms</h6>
+              <img src={itsms} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "itsms"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Itenarary by sms
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "itsms" && <i className="fa fa-caret-down"></i>}
+              {showingDiv === "itsms" && <i className="fa fa-caret-up"></i>}
             </div>
           </div>
-          <div
-            id="services-data-toggle17"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>
-              Flight details by SMS. <br />
-              <br />
-            </p>
-            <p>Get the flight details directly to your phone.</p>
-          </div>
+          {showingDiv === "itsms" && (
+            <div
+              id="services-data-toggle17"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>
+                Flight details by SMS. <br />
+                <br />
+              </p>
+              <p>Get the flight details directly to your phone.</p>
+            </div>
+          )}
         </div>
 
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="extraSeat()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor: showingDiv === "extraseat" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "extraseat" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "extraseat" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("extraseat");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img
-                src="images/AllServices/extrasheet.svg"
-                alt=""
-                width="50px"
-              />
-              <h6 className="my-3 mx-2">Extra seat</h6>
+              <img src={extraseat} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "extraseat"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Extra seat
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "extraseat" && (
+                <i className="fa fa-caret-down"></i>
+              )}
+              {showingDiv === "extraseat" && <i className="fa fa-caret-up"></i>}
             </div>
           </div>
-          <div
-            id="services-data-toggle18"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>
-              An extra seat in the aircraft (EXST) can be requested in order to
-              meet passenger needs. <br />
-              <br />
-            </p>
-            <p>
-              The ticket for an additional seat (EXST) consists of 100% of the
-              applicable fare + company fees/taxes (YQ/YR) and needs to be
-              issued same time as passenger’s ticket issuance (only after
-              Carrier’s approval). Airport taxes/fees and charges will not be
-              applied for EXST. <br />
-              Online booking is not allowed for additional seats (EXST). Extra
-              seats should be requested by company’s authorized agencies or
-              representatives. Web check-in is not possible for the passenger
-              with EXST. <br />
-              <br />
-            </p>
-            <p>
-              For safety reasons passengers with extra seats cannot travel next
-              to emergency exists.
-            </p>
-          </div>
+          {showingDiv === "extraseat" && (
+            <div
+              id="services-data-toggle18"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>
+                An extra seat in the aircraft (EXST) can be requested in order
+                to meet passenger needs. <br />
+                <br />
+              </p>
+              <p>
+                The ticket for an additional seat (EXST) consists of 100% of the
+                applicable fare + company fees/taxes (YQ/YR) and needs to be
+                issued same time as passenger’s ticket issuance (only after
+                Carrier’s approval). Airport taxes/fees and charges will not be
+                applied for EXST. <br />
+                Online booking is not allowed for additional seats (EXST). Extra
+                seats should be requested by company’s authorized agencies or
+                representatives. Web check-in is not possible for the passenger
+                with EXST. <br />
+                <br />
+              </p>
+              <p>
+                For safety reasons passengers with extra seats cannot travel
+                next to emergency exists.
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="stroller()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor: showingDiv === "stroller" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "stroller" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "stroller" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("stroller");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img src="images/AllServices/stroller.svg" alt="" width="50px" />
-              <h6 className="my-3 mx-2">Stroller</h6>
+              <img src={stroller} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "stroller"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Stroller
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "stroller" && (
+                <i className="fa fa-caret-down"></i>
+              )}
+              {showingDiv === "stroller" && <i className="fa fa-caret-up"></i>}
             </div>
           </div>
-          <div
-            id="services-data-toggle19"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>
-              Are you travelling with your baby? You can travel with the baby
-              trolley. <br />
-              <br />
-            </p>
-            <p>The service is free for children up to 2 years.</p>
-            <p>* For children older than 2 years, Stroller fee will apply. </p>
-          </div>
+          {showingDiv === "stroller" && (
+            <div
+              id="services-data-toggle19"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>
+                Are you travelling with your baby? You can travel with the baby
+                trolley. <br />
+                <br />
+              </p>
+              <p>The service is free for children up to 2 years.</p>
+              <p>
+                * For children older than 2 years, Stroller fee will apply.{" "}
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="callCenterFee()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor:
+                showingDiv === "callcenterfee" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "callcenterfee" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "callcenterfee" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("callcenterfee");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img
-                src="images/AllServices/callcenterfee.svg"
-                alt=""
-                width="50px"
-              />
-              <h6 className="my-3 mx-2">Call center fee</h6>
+              <img src={callcenterfee} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "callcenterfee"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Call center fee
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "callcenterfee" && (
+                <i className="fa fa-caret-down"></i>
+              )}
+              {showingDiv === "callcenterfee" && (
+                <i className="fa fa-caret-up"></i>
+              )}
             </div>
           </div>
-          <div
-            id="services-data-toggle20"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>
-              Do you want to book a ticket or to add additional services via
-              phone? <br />
-              <br />
-            </p>
-            <p>
-              Do you want to book a ticket or to add additional services via
-              phone? <br />
-              <br />
-            </p>
-            <p>
-              Service cost – 10 EUR per information <br />
-            </p>
-          </div>
+          {showingDiv === "callcenterfee" && (
+            <div
+              id="services-data-toggle20"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>
+                Do you want to book a ticket or to add additional services via
+                phone? <br />
+                <br />
+              </p>
+              <p>
+                Do you want to book a ticket or to add additional services via
+                phone? <br />
+                <br />
+              </p>
+              <p>
+                Service cost – 10 EUR per information <br />
+              </p>
+            </div>
+          )}
         </div>
 
         <div className="row my-2">
           <div
             className="d-flex data-container p-4"
-            style={{ justifyContect: "space-between" }}
-            onclick="admissionFee()"
+            style={{
+              justifyContect: "space-between",
+              borderRadius: 5,
+              border: "1px solid #6ec3df",
+              backgroundColor:
+                showingDiv === "admissionfee" ? "#6ec3df" : "white",
+              borderBottomLeftRadius:
+                title === "show" && showingDiv === "admissionfee" ? 0 : 5,
+              borderBottomRightRadius:
+                title === "show" && showingDiv === "admissionfee" ? 0 : 5,
+            }}
+            onClick={() => {
+              if (title === "hide") {
+                setShowingDiv("admissionfee");
+                setTitle("show");
+              } else {
+                setShowingDiv("");
+                setTitle("hide");
+              }
+            }}
           >
             <div className="d-flex col-11">
-              <img
-                src="images/AllServices/admissionfee.svg"
-                alt=""
-                width="50px"
-              />
-              <h6 className="my-3 mx-2">Admission fee</h6>
+              <img src={admissionfee} alt="" width="50px" />
+              <h6
+                className="my-3 mx-2"
+                style={{
+                  color:
+                    title === "show" && showingDiv === "admissionfee"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Admission fee
+              </h6>
             </div>
             <div className="col-1 my-3" style={{ textAlign: "end" }}>
-              <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-              <i
-                className="fa fa-caret-up"
-                id="ct-down"
-                style={{ visibility: "hidden" }}
-              ></i>
+              {showingDiv !== "admissionfee" && (
+                <i className="fa fa-caret-down"></i>
+              )}
+              {showingDiv === "admissionfee" && (
+                <i className="fa fa-caret-up"></i>
+              )}
             </div>
           </div>
-          <div
-            id="services-data-toggle21"
-            className="services-data-toggle"
-            style={{ display: "none" }}
-          >
-            <p>
-              The administration fee is applied for each issued ticket. <br />
-              <br />
-            </p>
-            <p>
-              Per passenger, per flight <br />
-              <br />
-            </p>
-            <p>
-              Service cost – 13 EUR per flight. <br />
-              <br />
-            </p>
-          </div>
+          {showingDiv === "admissionfee" && (
+            <div
+              id="services-data-toggle21"
+              className="services-data-toggle"
+              style={{
+                border: "1px solid #6ec3df",
+                borderBottomLeftRadius: 5,
+                borderBottomRightRadius: 5,
+              }}
+            >
+              <p>
+                The administration fee is applied for each issued ticket. <br />
+                <br />
+              </p>
+              <p>
+                Per passenger, per flight <br />
+                <br />
+              </p>
+              <p>
+                Service cost – 13 EUR per flight. <br />
+                <br />
+              </p>
+            </div>
+          )}
         </div>
       </div>
     </>

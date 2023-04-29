@@ -3,6 +3,7 @@ import "./allServices.css";
 import { useEffect } from "react";
 import MyFlyone from "../MyFLYONE/MyFlyone";
 import TotalServices from "../TotalServices/TotalServices";
+import FareFmilies from "../HowToBook/FareFamilies/FareFmilies";
 function AllServices() {
   //   const [howToBookShow, setHowToBookShow] = useState(false);
   const [title, setTitle] = useState("hide");
@@ -384,7 +385,7 @@ function AllServices() {
           </div>
           <div className="col-8 right-div-data">
             {/* <MyFlyone /> */}
-            <TotalServices />
+            <FareFmilies />
           </div>
         </div>
       </div>

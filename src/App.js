@@ -15,13 +15,13 @@ function App() {
   return (
     <div>
       <Header />
-      <Slider />
+      {/* <Slider />
       <SearchSection />
       <CheckInStatus />
       <CheapFlightComponent />
       <AdditionalServices />
-      <SubscribeApp />
-      {/* <AllServices /> */}
+      <SubscribeApp /> */}
+      <AllServices />
 
       <Footer />
     </div>

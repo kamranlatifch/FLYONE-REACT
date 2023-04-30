@@ -5,6 +5,7 @@ import MyFlyone from "../MyFLYONE/MyFlyone";
 import TotalServices from "../TotalServices/TotalServices";
 import FareFmilies from "../HowToBook/FareFamilies/FareFmilies";
 import MyBookings from "../HowToBook/MyBookings/MyBookings";
+import FlightStatus from "../HowToBook/FlightStatus/FlightStatus";
 function AllServices() {
   //   const [howToBookShow, setHowToBookShow] = useState(false);
   const [title, setTitle] = useState("hide");
@@ -387,7 +388,9 @@ function AllServices() {
           <div className="col-8 right-div-data">
             {/* <MyFlyone /> */}
             {/* <FareFmilies /> */}
-            <MyBookings />
+            {/* <MyBookings /> */}
+            {/* <FlightStatus /> */}
+            <TotalServices />
           </div>
         </div>
       </div>

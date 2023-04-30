@@ -11,18 +11,19 @@ import SubscribeApp from "./Components/SubscribeApp/SubscribeApp";
 
 import Footer from "./Components/Footer/Footer";
 import AllServices from "./Components/AllServices/AllServices";
+import FlightStatus from "./Components/HowToBook/FlightStatus/FlightStatus";
 function App() {
   return (
     <div>
       <Header />
-      {/* <Slider />
+      <Slider />
       <SearchSection />
       <CheckInStatus />
       <CheapFlightComponent />
       <AdditionalServices />
-      <SubscribeApp /> */}
-      <AllServices />
-
+      <SubscribeApp />
+      {/* <AllServices /> */}
+      {/*<FlightStatus /> */}
       <Footer />
     </div>
   );

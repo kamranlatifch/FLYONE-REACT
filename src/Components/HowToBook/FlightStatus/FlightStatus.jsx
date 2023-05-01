@@ -94,7 +94,7 @@ function FlightStatus() {
         )}
       </div>
 
-      <div className="col-8 my-4">
+      <div className="col-8 schedule-info my-4">
         <p>
           The flight schedule is adapted to local time. Flight changes may
           affect other services - check-in, baggage handover, boarding or other

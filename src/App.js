@@ -16,14 +16,14 @@ function App() {
   return (
     <div>
       <Header />
-      <Slider />
+      {/* <Slider />
       <SearchSection />
       <CheckInStatus />
       <CheapFlightComponent />
       <AdditionalServices />
-      <SubscribeApp />
+      <SubscribeApp /> */}
       {/* <AllServices /> */}
-      {/*<FlightStatus /> */}
+      <FlightStatus />
       <Footer />
     </div>
   );

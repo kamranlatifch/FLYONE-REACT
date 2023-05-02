@@ -12,19 +12,20 @@ import SubscribeApp from "./Components/SubscribeApp/SubscribeApp";
 import Footer from "./Components/Footer/Footer";
 import AllServices from "./Components/AllServices/AllServices";
 import FlightStatus from "./Components/HowToBook/FlightStatus/FlightStatus";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import Home from "./Components/Home";
 function App() {
   return (
     <div>
-      <Header />
-      {/* <Slider />
-      <SearchSection />
-      <CheckInStatus />
-      <CheapFlightComponent />
-      <AdditionalServices />
-      <SubscribeApp /> */}
-      {/* <AllServices /> */}
-      <FlightStatus />
-      <Footer />
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/flightStatus" element={<FlightStatus />} />
+          <Route path="/*" element={<Navigate to="/" />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }

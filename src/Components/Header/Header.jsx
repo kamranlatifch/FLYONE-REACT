@@ -19,6 +19,7 @@ import pic15 from "../Images/Booking/myflyone.svg";
 import pic16 from "../Images/Booking/rent-a-car.svg";
 import logo from "../Images/logo.jpg";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 function Header() {
   const [signupShown, setSignupShown] = useState(false);
   const [title, setTitle] = useState("hide");
@@ -43,7 +44,9 @@ function Header() {
       <nav className="navbar navbar-expand-lg navbar-light bg-light ">
         <div className="container-fluid bg-primary header">
           <a className="navbar-brand" href="/">
-            <img className="logo" src={logo} alt="" style={{ height: 70 }} />
+            <Link to="/">
+              <img className="logo" src={logo} alt="" style={{ height: 70 }} />
+            </Link>
           </a>
           <button
             className="navbar-toggler"

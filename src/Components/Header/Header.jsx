@@ -21,13 +21,23 @@ import logo from "../Images/logo.jpg";
 import { useState } from "react";
 function Header() {
   const [signupShown, setSignupShown] = useState(false);
+  const [title, setTitle] = useState("hide");
+  const [showingDiv, setShowingDiv] = useState("");
   const signupShownClick = () => {
     setSignupShown(true);
   };
   const loginShownClick = () => {
     setSignupShown(false);
   };
-
+  const display = (prameter) => {
+    if (title === "hide") {
+      setTitle("show");
+      setShowingDiv(prameter);
+    } else {
+      setShowingDiv("");
+      setTitle("hide");
+    }
+  };
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light ">
@@ -51,7 +61,7 @@ function Header() {
             id="navbarSupportedContent"
           >
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item my-2">
+              <li className="nav-item my-2" onClick={() => display("book")}>
                 <a
                   className="nav-link active"
                   aria-current="page"
@@ -60,17 +70,24 @@ function Header() {
                   data-bs-target="#bookingModel"
                 >
                   Book
+                  {showingDiv !== "book" && (
+                    <i className="fa fa-caret-down"></i>
+                  )}
+                  {showingDiv === "book" && <i className="fa fa-caret-up"></i>}
                 </a>
               </li>
-              <li className="nav-item my-2">
+              <li className="nav-item my-2" onClick={() => display("info")}>
                 <a
                   className="nav-link"
                   href="/"
                   data-bs-toggle="modal"
                   data-bs-target="#infoModel"
                 >
-                  {" "}
                   Info
+                  {showingDiv !== "info" && (
+                    <i className="fa fa-caret-down"></i>
+                  )}
+                  {showingDiv === "info" && <i className="fa fa-caret-up"></i>}
                 </a>
               </li>
               <li className="nav-item my-2">
@@ -162,6 +179,7 @@ function Header() {
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                onClick={() => display("")}
               ></button>
             </div>
             <div className="modal-body d-flex">
@@ -1268,6 +1286,7 @@ function Header() {
                 className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
+                onClick={() => display("")}
               ></button>
             </div>
             <div className="modal-body d-flex">

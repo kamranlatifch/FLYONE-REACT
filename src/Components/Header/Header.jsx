@@ -1,5 +1,6 @@
 import React from "react";
 import "../Header/header.css";
+
 import pic from "../Images/Booking/activities.svg";
 import pic1 from "../Images/Booking/airport-chkin.svg";
 import pic2 from "../Images/Booking/airport-transfer.svg";
@@ -1327,13 +1328,13 @@ function Header() {
                 </div>
                 <div className="fl-bk-col d-flex">
                   <img src={pic9} alt="" style={{ width: 40 }} />
-                  <a
-                    href=""
+                  <Link
+                    to="/how-to-book/myflyone"
                     style={{ textDecoration: "none" }}
                     className="my-3"
                   >
                     <h5>&nbsp; MyFLYONE</h5>
-                  </a>
+                  </Link>
                 </div>
                 <div className="fl-bk-col d-flex">
                   <img src={pic14} alt="" style={{ width: 40 }} />

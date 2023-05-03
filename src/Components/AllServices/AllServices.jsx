@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./allServices.css";
 import { useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
 import MyFlyone from "../MyFLYONE/MyFlyone";
 import TotalServices from "../TotalServices/TotalServices";
 import FareFmilies from "../HowToBook/FareFamilies/FareFmilies";
@@ -10,21 +11,13 @@ function AllServices() {
   //   const [howToBookShow, setHowToBookShow] = useState(false);
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
-  //   useEffect(() => {
-  // if (title === "show" && showingDiv === "howtobook") {
-  //   setHowToBookShow(true);
-  // } else {
-  //   setHowToBookShow(false);
-  // }
-  // if (title === "show" && showingDiv === "beforeflight") {
-  //   setHowToBookShow(true);
-  // } else {
-  //   setHowToBookShow(false);
-  // }
-  //   }, [title]);
+  const [name, setName] = useState("");
+  const params = useParams();
+  const { url } = params;
 
   return (
     <>
+      <h1>{url} recieved</h1>
       <div className="container-fluid all-services col-12 t">
         <h1 className="my-5 l-3">All Services</h1>
         <div className="row my-3" style={{ justifyContent: "space-around" }}>
@@ -58,9 +51,10 @@ function AllServices() {
                 </div>
                 {showingDiv === "howtobook" && (
                   <div id="howToBookDiv" className="services">
-                    <a href="How-to-book/MyFLYONE.html">My FLYONE</a>
-                    <a href="/">Fare Families</a>
-                    <a href="/">MyBookings</a>
+                    <Link to="/how-to-book/myflyone">My Flyone</Link>
+                    <Link to="/how-to-book/fare-families">Fare Families</Link>
+
+                    <Link to="/how-to-book/myBookings">MyBookings</Link>
                     <a href="/">Passenger Types</a>
                     <a href="/">Group Bookings</a>
                     <a href="/">Voucher Conditions</a>
@@ -386,11 +380,11 @@ function AllServices() {
             </div>
           </div>
           <div className="col-8 right-div-data">
-            {/* <MyFlyone /> */}
-            {/* <FareFmilies /> */}
-            {/* <MyBookings /> */}
+            {url === "myflyone" && <MyFlyone />}
+            {url === "fare-families" && <FareFmilies />}
+            {url === "myBookings" && <MyBookings />}
             {/* <FlightStatus /> */}
-            <TotalServices />
+            {/* <TotalServices /> */}
           </div>
         </div>
       </div>

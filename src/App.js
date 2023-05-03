@@ -14,6 +14,9 @@ import AllServices from "./Components/AllServices/AllServices";
 import FlightStatus from "./Components/HowToBook/FlightStatus/FlightStatus";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./Components/Home";
+import TotalServices from "./Components/TotalServices/TotalServices";
+import MyBookings from "./Components/HowToBook/MyBookings/MyBookings";
+import MyFlyone from "./Components/MyFLYONE/MyFlyone";
 function App() {
   return (
     <div>
@@ -23,6 +26,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/flightStatus" element={<FlightStatus />} />
           <Route path="/*" element={<Navigate to="/" />} />
+          <Route path="/services" element={<AllServices />} />
+          <Route path="/how-to-book/:url" element={<AllServices />} />
         </Routes>
         <Footer />
       </BrowserRouter>

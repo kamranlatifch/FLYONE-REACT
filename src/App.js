@@ -27,7 +27,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/flightStatus" element={<FlightStatus />} />
           <Route path="/*" element={<Navigate to="/" />} />
-          <Route path="/services" element={<AllServices />} />
+          <Route path="/en/:url" element={<AllServices />} />
           <Route path="/how-to-book/:url" element={<AllServices />} />
           <Route
             path="/Trip-Assistant/Flight-status-online"
@@ -37,6 +37,7 @@ function App() {
             path="/Trip-Assistant/Fare-Calendar"
             element={<FareCalender />}
           />
+          <Route path="/Trip-Assistant/:url" element={<AllServices />} />
         </Routes>
         <Footer />
       </BrowserRouter>

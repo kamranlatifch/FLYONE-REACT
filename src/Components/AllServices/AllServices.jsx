@@ -11,6 +11,9 @@ import PassangerTypes from "../HowToBook/PassengerTypes/PassangerTypes";
 import GroupBookings from "../HowToBook/GroupBookings/GroupBookings";
 import VoucherCondition from "../HowToBook/VoucherCondition/VoucherCondition";
 import FlyoneMobileApp from "../HowToBook/MobileApp/FlyoneMobileApp";
+import NetworkMap from "../TripAssistant/NetworkMap/NetworkMap";
+import AdServices from "./AdServices/AdServices";
+import FlyOneFee from "./FlyOneFee/FlyOneFee";
 function AllServices() {
   //   const [howToBookShow, setHowToBookShow] = useState(false);
   const [title, setTitle] = useState("hide");
@@ -152,8 +155,7 @@ function AllServices() {
                     <Link to="/Trip-Assistant/Fare-Calendar">
                       Fare Calender
                     </Link>
-
-                    <a href="/">Network Map</a>
+                    <Link to="/Trip-Assistant/Network-map">Network Map</Link>
                   </div>
                 )}
               </div>
@@ -214,28 +216,33 @@ function AllServices() {
 
               <div>
                 <div className="title my-3">
-                  <h6 style={{ marginLeft: 10 }}>
-                    {" "}
-                    <b>All Services</b>{" "}
-                    <i className="fa fa-caret-down" id="ct-up"></i>
-                  </h6>
+                  <Link to="/en/All-services">
+                    <h6 style={{ marginLeft: 10 }}>
+                      <b>All Services</b>{" "}
+                      <i className="fa fa-caret-down" id="ct-up"></i>
+                    </h6>
+                  </Link>
                 </div>
               </div>
               <div>
                 <div className="title my-3">
-                  <h6 style={{ marginLeft: 10 }}>
-                    <b>Additional Services</b>{" "}
-                    <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-                  </h6>
+                  <Link to="/en/Additional-services">
+                    <h6 style={{ marginLeft: 10 }}>
+                      <b>Additional Services</b>{" "}
+                      <i className="fa fa-caret-down" id="ct-up"></i>{" "}
+                    </h6>
+                  </Link>
                 </div>
               </div>
               <div>
                 <div className="title my-3">
-                  <h6 style={{ marginLeft: 10 }}>
-                    {" "}
-                    <b>FLYONE FEES</b>{" "}
-                    <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-                  </h6>
+                  <Link to="/en/FLYONE-FEES">
+                    <h6 style={{ marginLeft: 10 }}>
+                      {" "}
+                      <b>FLYONE FEES</b>{" "}
+                      <i className="fa fa-caret-down" id="ct-up"></i>{" "}
+                    </h6>
+                  </Link>
                 </div>
               </div>
 
@@ -404,6 +411,10 @@ function AllServices() {
             {replaced === "Group Bookings" && <GroupBookings />}
             {replaced === "Voucher Condition" && <VoucherCondition />}
             {replaced === "Flyone Mobile app" && <FlyoneMobileApp />}
+            {replaced === "Network map" && <NetworkMap />}
+            {replaced === "All services" && <TotalServices />}
+            {replaced === "Additional services" && <AdServices />}
+            {replaced === "FLYONE FEES" && <FlyOneFee />}
             {/* {url === "Flight-status-online" && <FlightStatus />}
             {url === "Fare-Calendar" && <FlightStatus />} */}
             {/* <FlightStatus /> */}

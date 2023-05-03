@@ -6,7 +6,7 @@ import MyFlyone from "../MyFLYONE/MyFlyone";
 import TotalServices from "../TotalServices/TotalServices";
 import FareFmilies from "../HowToBook/FareFamilies/FareFmilies";
 import MyBookings from "../HowToBook/MyBookings/MyBookings";
-import FlightStatus from "../HowToBook/FlightStatus/FlightStatus";
+import FlightStatus from "../TripAssistant/FlightStatus/FlightStatus";
 import PassangerTypes from "../HowToBook/PassengerTypes/PassangerTypes";
 import GroupBookings from "../HowToBook/GroupBookings/GroupBookings";
 import VoucherCondition from "../HowToBook/VoucherCondition/VoucherCondition";
@@ -15,15 +15,17 @@ function AllServices() {
   //   const [howToBookShow, setHowToBookShow] = useState(false);
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
-  const [name, setName] = useState("");
+
   const params = useParams();
   const { url } = params;
 
   return (
     <>
-      <h1>{url} recieved</h1>
+      <h1 className="my-5" style={{ marginLeft: 40 }}>
+        {" "}
+        {url}
+      </h1>
       <div className="container-fluid all-services col-12 t">
-        <h1 className="my-5 l-3">All Services</h1>
         <div className="row my-3" style={{ justifyContent: "space-around" }}>
           <div className="col-2 left-div-container">
             <div
@@ -55,17 +57,17 @@ function AllServices() {
                 </div>
                 {showingDiv === "howtobook" && (
                   <div id="howToBookDiv" className="services">
-                    <Link to="/how-to-book/myflyone">My Flyone</Link>
-                    <Link to="/how-to-book/fare-families">Fare Families</Link>
-                    <Link to="/how-to-book/myBookings">MyBookings</Link>
-                    <Link to="/how-to-book/passanger-types">
+                    <Link to="/how-to-book/MyFlyone">My Flyone</Link>
+                    <Link to="/how-to-book/Fare Families">Fare Families</Link>
+                    <Link to="/how-to-book/MyBookings">MyBookings</Link>
+                    <Link to="/how-to-book/Passanger Types">
                       Passenger Types
                     </Link>
-                    <Link to="/how-to-book/group-bookings">Group Bookings</Link>
-                    <Link to="/how-to-book/voucher-condition">
+                    <Link to="/how-to-book/Group Bookings">Group Bookings</Link>
+                    <Link to="/how-to-book/Voucher Condition">
                       Voucher Conditions
                     </Link>
-                    <Link to="/how-to-book/flyone-mobile-app">
+                    <Link to="/how-to-book/Flyone Mobile app">
                       FLYONE Mobile App
                     </Link>
                   </div>
@@ -143,8 +145,13 @@ function AllServices() {
                     className="services"
                     style={{ display: "grid" }}
                   >
-                    <a href="/">Flight Status Online</a>
-                    <a href="/">Fare Calender</a>
+                    <Link to="/Trip-Assistant/Flight-status-online">
+                      Flight Status Online
+                    </Link>
+                    <Link to="/Trip-Assistant/Fare-Calendar">
+                      Fare Calender
+                    </Link>
+
                     <a href="/">Network Map</a>
                   </div>
                 )}
@@ -389,13 +396,15 @@ function AllServices() {
             </div>
           </div>
           <div className="col-8 right-div-data">
-            {url === "myflyone" && <MyFlyone />}
-            {url === "fare-families" && <FareFmilies />}
-            {url === "myBookings" && <MyBookings />}
-            {url === "passanger-types" && <PassangerTypes />}
-            {url === "group-bookings" && <GroupBookings />}
-            {url === "voucher-condition" && <VoucherCondition />}
-            {url === "flyone-mobile-app" && <FlyoneMobileApp />}
+            {url === "MyFlyone" && <MyFlyone />}
+            {url === "Fare Families" && <FareFmilies />}
+            {url === "MyBookings" && <MyBookings />}
+            {url === "Passanger Types" && <PassangerTypes />}
+            {url === "Group Bookings" && <GroupBookings />}
+            {url === "Voucher Condition" && <VoucherCondition />}
+            {url === "Flyone Mobile app" && <FlyoneMobileApp />}
+            {/* {url === "Flight-status-online" && <FlightStatus />}
+            {url === "Fare-Calendar" && <FlightStatus />} */}
             {/* <FlightStatus /> */}
             {/* <TotalServices /> */}
           </div>

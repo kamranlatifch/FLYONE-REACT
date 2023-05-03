@@ -11,12 +11,13 @@ import SubscribeApp from "./Components/SubscribeApp/SubscribeApp";
 
 import Footer from "./Components/Footer/Footer";
 import AllServices from "./Components/AllServices/AllServices";
-import FlightStatus from "./Components/HowToBook/FlightStatus/FlightStatus";
+import FlightStatus from "./Components/TripAssistant/FlightStatus/FlightStatus";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./Components/Home";
 import TotalServices from "./Components/TotalServices/TotalServices";
 import MyBookings from "./Components/HowToBook/MyBookings/MyBookings";
 import MyFlyone from "./Components/MyFLYONE/MyFlyone";
+import FareCalender from "./Components/TripAssistant/FareCalender/FareCalender";
 function App() {
   return (
     <div>
@@ -28,6 +29,14 @@ function App() {
           <Route path="/*" element={<Navigate to="/" />} />
           <Route path="/services" element={<AllServices />} />
           <Route path="/how-to-book/:url" element={<AllServices />} />
+          <Route
+            path="/Trip-Assistant/Flight-status-online"
+            element={<FlightStatus />}
+          />
+          <Route
+            path="/Trip-Assistant/Fare-Calendar"
+            element={<FareCalender />}
+          />
         </Routes>
         <Footer />
       </BrowserRouter>

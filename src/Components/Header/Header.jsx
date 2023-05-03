@@ -1329,7 +1329,7 @@ function Header() {
                 <div className="fl-bk-col d-flex">
                   <img src={pic9} alt="" style={{ width: 40 }} />
                   <Link
-                    to="/how-to-book/myflyone"
+                    to="/how-to-book/MyFlyone"
                     style={{ textDecoration: "none" }}
                     className="my-3"
                   >

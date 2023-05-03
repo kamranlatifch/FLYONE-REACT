@@ -18,12 +18,13 @@ function AllServices() {
 
   const params = useParams();
   const { url } = params;
+  var replaced = url.split("-").join(" ");
 
   return (
     <>
       <h1 className="my-5" style={{ marginLeft: 40 }}>
         {" "}
-        {url}
+        {replaced}
       </h1>
       <div className="container-fluid all-services col-12 t">
         <div className="row my-3" style={{ justifyContent: "space-around" }}>
@@ -58,16 +59,16 @@ function AllServices() {
                 {showingDiv === "howtobook" && (
                   <div id="howToBookDiv" className="services">
                     <Link to="/how-to-book/MyFlyone">My Flyone</Link>
-                    <Link to="/how-to-book/Fare Families">Fare Families</Link>
+                    <Link to="/how-to-book/Fare-Families">Fare Families</Link>
                     <Link to="/how-to-book/MyBookings">MyBookings</Link>
-                    <Link to="/how-to-book/Passanger Types">
+                    <Link to="/how-to-book/Passanger-Types">
                       Passenger Types
                     </Link>
-                    <Link to="/how-to-book/Group Bookings">Group Bookings</Link>
-                    <Link to="/how-to-book/Voucher Condition">
+                    <Link to="/how-to-book/Group-Bookings">Group Bookings</Link>
+                    <Link to="/how-to-book/Voucher-Condition">
                       Voucher Conditions
                     </Link>
-                    <Link to="/how-to-book/Flyone Mobile app">
+                    <Link to="/how-to-book/Flyone-Mobile-app">
                       FLYONE Mobile App
                     </Link>
                   </div>
@@ -396,13 +397,13 @@ function AllServices() {
             </div>
           </div>
           <div className="col-8 right-div-data">
-            {url === "MyFlyone" && <MyFlyone />}
-            {url === "Fare Families" && <FareFmilies />}
-            {url === "MyBookings" && <MyBookings />}
-            {url === "Passanger Types" && <PassangerTypes />}
-            {url === "Group Bookings" && <GroupBookings />}
-            {url === "Voucher Condition" && <VoucherCondition />}
-            {url === "Flyone Mobile app" && <FlyoneMobileApp />}
+            {replaced === "MyFlyone" && <MyFlyone />}
+            {replaced === "Fare Families" && <FareFmilies />}
+            {replaced === "MyBookings" && <MyBookings />}
+            {replaced === "Passanger Types" && <PassangerTypes />}
+            {replaced === "Group Bookings" && <GroupBookings />}
+            {replaced === "Voucher Condition" && <VoucherCondition />}
+            {replaced === "Flyone Mobile app" && <FlyoneMobileApp />}
             {/* {url === "Flight-status-online" && <FlightStatus />}
             {url === "Fare-Calendar" && <FlightStatus />} */}
             {/* <FlightStatus /> */}

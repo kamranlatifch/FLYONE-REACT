@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./allServices.css";
-import { useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { Link, useParams } from "react-router-dom";
 import MyFlyone from "../MyFLYONE/MyFlyone";
 import TotalServices from "../TotalServices/TotalServices";
@@ -61,19 +61,23 @@ function AllServices() {
                 </div>
                 {showingDiv === "howtobook" && (
                   <div id="howToBookDiv" className="services">
-                    <Link to="/how-to-book/MyFlyone">My Flyone</Link>
-                    <Link to="/how-to-book/Fare-Families">Fare Families</Link>
-                    <Link to="/how-to-book/MyBookings">MyBookings</Link>
-                    <Link to="/how-to-book/Passanger-Types">
+                    <NavLink to="/how-to-book/MyFlyone">My Flyone</NavLink>
+                    <NavLink to="/how-to-book/Fare-Families">
+                      Fare Families
+                    </NavLink>
+                    <NavLink to="/how-to-book/MyBookings">MyBookings</NavLink>
+                    <NavLink to="/how-to-book/Passanger-Types">
                       Passenger Types
-                    </Link>
-                    <Link to="/how-to-book/Group-Bookings">Group Bookings</Link>
-                    <Link to="/how-to-book/Voucher-Condition">
+                    </NavLink>
+                    <NavLink to="/how-to-book/Group-Bookings">
+                      Group Bookings
+                    </NavLink>
+                    <NavLink to="/how-to-book/Voucher-Condition">
                       Voucher Conditions
-                    </Link>
-                    <Link to="/how-to-book/Flyone-Mobile-app">
+                    </NavLink>
+                    <NavLink to="/how-to-book/Flyone-Mobile-app">
                       FLYONE Mobile App
-                    </Link>
+                    </NavLink>
                   </div>
                 )}
               </div>
@@ -415,10 +419,6 @@ function AllServices() {
             {replaced === "All services" && <TotalServices />}
             {replaced === "Additional services" && <AdServices />}
             {replaced === "FLYONE FEES" && <FlyOneFee />}
-            {/* {url === "Flight-status-online" && <FlightStatus />}
-            {url === "Fare-Calendar" && <FlightStatus />} */}
-            {/* <FlightStatus /> */}
-            {/* <TotalServices /> */}
           </div>
         </div>
       </div>

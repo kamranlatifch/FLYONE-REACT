@@ -3,6 +3,9 @@
     text-align: left;
     
   }
+  .all-services .active{
+    color: blue;
+  }
   .all-services  a{
   
     text-decoration: none;

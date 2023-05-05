@@ -14,8 +14,16 @@ import FlyoneMobileApp from "../HowToBook/MobileApp/FlyoneMobileApp";
 import NetworkMap from "../TripAssistant/NetworkMap/NetworkMap";
 import AdServices from "./AdServices/AdServices";
 import FlyOneFee from "./FlyOneFee/FlyOneFee";
+import Checkin from "../BeforeFlight/CheckIn/Checkin";
+import Baggage from "../BeforeFlight/Baggage/Baggage";
+import ElectronicDevices from "../BeforeFlight/ElectronicDevices/ElectronicDevices";
+import GuideForSafeTravel from "../BeforeFlight/GuideForSafeTravel/GuideForSafeTravel";
+import ImportantTravelUpdates from "../BeforeFlight/IMPORTANT-TravelUpdates/ImportantTravelUpdates";
+import Liquids from "../BeforeFlight/Liquids/Liquids";
+import Meal from "../BeforeFlight/Meal/Meal";
+import MenuOnBoard from "../BeforeFlight/MenuOnBoard/MenuOnBoard";
+import PassportDetails from "../BeforeFlight/PassportDetails/PassportDetails";
 function AllServices() {
-  //   const [howToBookShow, setHowToBookShow] = useState(false);
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
 
@@ -106,20 +114,28 @@ function AllServices() {
                 </div>
                 {showingDiv === "beforeflight" && (
                   <div id="beforeFlightsDiv" className="services">
-                    <a href="fareview.html">Baggage</a>
+                    <Link to="/Before-flight/Baggage">Baggage</Link>
                     <a href="/">Seat Selection</a>
-                    <a href="/">Check-In</a>
-                    <a href="/">Meal</a>
-                    <a href="/">Menu On Board</a>
+                    <Link to="/Before-flight/Check-in">Check-In</Link>
+                    <Link to="/Before-flight/Meal">Meal</Link>
+                    <Link to="/Before-flight/Menu-on-Board">Menu On Board</Link>
                     <a href="/">Unaccompanied Minor</a>
-                    <a href="/">Passport Details</a>
-                    <a href="/">Electronic Devices</a>
-                    <a href="/">Liquids</a>
+                    <Link to="/Before-flight/Passport-details">
+                      Passport Details
+                    </Link>
+                    <Link to="/Before-flight/Electronic-Devices">
+                      Electronic Devices
+                    </Link>
+                    <Link to="/Before-flight/Liquids">Liquids</Link>
                     <a href="/">Smoking</a>
                     <a href="/">Zero Tolerance Policy</a>
                     <a href="/">Security: Articles Prohibited</a>
-                    <a href="/">Guide For Safe Travel</a>
-                    <a href="/">IMPORTANT: Travel Updates</a>
+                    <Link to="/Before-flight/Guide-for-Safe-Travel">
+                      Guide For Safe Travel
+                    </Link>
+                    <Link to="/Before-flight/IMPORTANT:Travel-Updates">
+                      IMPORTANT: Travel Updates
+                    </Link>
                   </div>
                 )}
               </div>
@@ -419,6 +435,16 @@ function AllServices() {
             {replaced === "All services" && <TotalServices />}
             {replaced === "Additional services" && <AdServices />}
             {replaced === "FLYONE FEES" && <FlyOneFee />}
+            {replaced === "Check in" && <Checkin />}
+            {replaced === "Baggage" && <Baggage />}
+            {replaced === "Electronic Devices" && <ElectronicDevices />}
+            {replaced === "Guide for Safe Travel" && <GuideForSafeTravel />}
+            {replaced === "IMPORTANT:Travel Updates" && (
+              <ImportantTravelUpdates />
+            )}
+            {replaced === "Meal" && <Meal />}
+            {replaced === "Menu on Board" && <MenuOnBoard />}
+            {replaced === "Passport details" && <PassportDetails />}
           </div>
         </div>
       </div>

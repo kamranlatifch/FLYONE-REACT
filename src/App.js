@@ -38,6 +38,7 @@ function App() {
             element={<FareCalender />}
           />
           <Route path="/Trip-Assistant/:url" element={<AllServices />} />
+          <Route path="/Before-flight/:url" element={<AllServices />} />
         </Routes>
         <Footer />
       </BrowserRouter>

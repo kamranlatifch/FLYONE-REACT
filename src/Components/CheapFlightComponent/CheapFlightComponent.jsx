@@ -5,6 +5,7 @@ import CheapFlightSlider from "../CheapFlightSlider/CheapFlightSlider";
 import pic1 from "../Images/Main/1.jpg";
 import pic2 from "../Images/Main/2.jpg";
 import pic3 from "../Images/Main/3.jpg";
+import { Link } from "react-router-dom";
 function CheapFlightComponent() {
   let slider1 = cheapFlightData.slice(0, 3);
   let slider2 = cheapFlightData.slice(3, 6);
@@ -12,7 +13,16 @@ function CheapFlightComponent() {
   let slider4 = cheapFlightData.slice(9, 12);
   return (
     <>
-      <h4>Cheap Flights</h4>
+      <div className="d-flex">
+        <div style={{ marginLeft: 30 }}>
+          <h4>Cheap Flights</h4>
+        </div>
+        <div style={{ marginLeft: 30 }}>
+          <Link to="/en/Destinations">
+            <button className="btn ad-btn btn-primary">View All</button>
+          </Link>
+        </div>
+      </div>
       <div
         id="carouselExampleControls"
         className="carousel slide CfSlider"

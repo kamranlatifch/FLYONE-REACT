@@ -31,6 +31,7 @@ import UnaccompaniedMinor from "../BeforeFlight/UnaccompaniedMinor/Unaccompanied
 import AboutCompany from "../AboutFLYONE/AboutCompany/AboutCompany";
 import Fleet from "../AboutFLYONE/Fleet/Fleet";
 import GeneralRules from "../AboutFLYONE/GeneralRules/GeneralRules";
+import Destination from "../Destinations/Destination";
 function AllServices() {
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
@@ -473,12 +474,14 @@ function AllServices() {
             {replaced === "Security: articles prohibited" && (
               <ArticlesProhibited />
             )}
+            {replaced === "Liquids" && <Liquids />}
             {replaced === "Smoking" && <Smoking />}
             {replaced === "Zero tolerance policy" && <ZeroTolerancePolicy />}
             {replaced === "Unaccompanied Minor" && <UnaccompaniedMinor />}
             {replaced === "About company" && <AboutCompany />}
             {replaced === "Fleet" && <Fleet />}
             {replaced === "General Rules" && <GeneralRules />}
+            {replaced === "Destinations" && <Destination />}
           </div>
         </div>
       </div>

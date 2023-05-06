@@ -40,6 +40,7 @@ function App() {
           <Route path="/Trip-Assistant/:url" element={<AllServices />} />
           <Route path="/Before-flight/:url" element={<AllServices />} />
           <Route path="/en/About-FLYONE/:url" element={<AllServices />} />
+          <Route path="/en/:url" element={<AllServices />} />
         </Routes>
         <Footer />
       </BrowserRouter>

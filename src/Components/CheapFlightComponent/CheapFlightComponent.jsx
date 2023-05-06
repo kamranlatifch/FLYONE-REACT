@@ -1,6 +1,9 @@
 import React from "react";
 import CheapFlightSlider from "../CheapFlightSlider/CheapFlightSlider";
 import "./CFComponent.css";
+import pic1 from "../Images/Main/1.jpg";
+import pic2 from "../Images/Main/2.jpg";
+import pic3 from "../Images/Main/3.jpg";
 function CheapFlightComponent() {
   return (
     <>
@@ -12,14 +15,29 @@ function CheapFlightComponent() {
       >
         <div className="carousel-inner slider-Div">
           <div className="carousel-item active">
-            <CheapFlightSlider />
+            <CheapFlightSlider
+              from="Chisinau"
+              to="Laranaca"
+              price="83"
+              img={pic1}
+            />
+          </div>
+          {/* <div className="carousel-item">
+            <CheapFlightSlider
+              from="Chisinau"
+              to="Valancia"
+              price="49"
+              img={pic2}
+            />
           </div>
           <div className="carousel-item">
-            <CheapFlightSlider />
-          </div>
-          <div className="carousel-item">
-            <CheapFlightSlider />
-          </div>
+            <CheapFlightSlider
+              from="Yerevan"
+              to="Laranaca"
+              price="53"
+              img={pic3}
+            />
+          </div> */}
         </div>
         <button
           className="carousel-control-prev btn-previous"

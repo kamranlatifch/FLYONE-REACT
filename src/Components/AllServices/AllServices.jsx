@@ -23,6 +23,11 @@ import Liquids from "../BeforeFlight/Liquids/Liquids";
 import Meal from "../BeforeFlight/Meal/Meal";
 import MenuOnBoard from "../BeforeFlight/MenuOnBoard/MenuOnBoard";
 import PassportDetails from "../BeforeFlight/PassportDetails/PassportDetails";
+import SeatSelection from "../BeforeFlight/SeatSelection/SeatSelection";
+import ArticlesProhibited from "../BeforeFlight/Security-ArticlesProhibited/ArticlesProhibited";
+import Smoking from "../BeforeFlight/Smoking/Smoking";
+import ZeroTolerancePolicy from "../BeforeFlight/ZeroTolerancePolicy/ZeroTolerancePolicy";
+import UnaccompaniedMinor from "../BeforeFlight/UnaccompaniedMinor/UnaccompaniedMinor";
 function AllServices() {
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
@@ -115,11 +120,15 @@ function AllServices() {
                 {showingDiv === "beforeflight" && (
                   <div id="beforeFlightsDiv" className="services">
                     <Link to="/Before-flight/Baggage">Baggage</Link>
-                    <a href="/">Seat Selection</a>
+                    <Link to="/Before-flight/Seat-selection">
+                      Seat Selection
+                    </Link>
                     <Link to="/Before-flight/Check-in">Check-In</Link>
                     <Link to="/Before-flight/Meal">Meal</Link>
                     <Link to="/Before-flight/Menu-on-Board">Menu On Board</Link>
-                    <a href="/">Unaccompanied Minor</a>
+                    <Link to="/Before-flight/Unaccompanied-Minor">
+                      Unaccompanied Minor
+                    </Link>
                     <Link to="/Before-flight/Passport-details">
                       Passport Details
                     </Link>
@@ -127,9 +136,13 @@ function AllServices() {
                       Electronic Devices
                     </Link>
                     <Link to="/Before-flight/Liquids">Liquids</Link>
-                    <a href="/">Smoking</a>
-                    <a href="/">Zero Tolerance Policy</a>
-                    <a href="/">Security: Articles Prohibited</a>
+                    <Link to="/Before-flight/Smoking">Smoking</Link>
+                    <Link to="/Before-flight/Zero-tolerance-policy">
+                      Zero Tolerance Policy
+                    </Link>
+                    <Link to="/Before-flight/Security:-articles-prohibited">
+                      Security: Articles Prohibited
+                    </Link>
                     <Link to="/Before-flight/Guide-for-Safe-Travel">
                       Guide For Safe Travel
                     </Link>
@@ -445,6 +458,13 @@ function AllServices() {
             {replaced === "Meal" && <Meal />}
             {replaced === "Menu on Board" && <MenuOnBoard />}
             {replaced === "Passport details" && <PassportDetails />}
+            {replaced === "Seat selection" && <SeatSelection />}
+            {replaced === "Security: articles prohibited" && (
+              <ArticlesProhibited />
+            )}
+            {replaced === "Smoking" && <Smoking />}
+            {replaced === "Zero tolerance policy" && <ZeroTolerancePolicy />}
+            {replaced === "Unaccompanied Minor" && <UnaccompaniedMinor />}
           </div>
         </div>
       </div>

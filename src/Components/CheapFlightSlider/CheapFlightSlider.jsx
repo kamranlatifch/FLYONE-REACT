@@ -4,9 +4,9 @@ import "./cheapflightslider.css";
 function CheapFlightSlider(props) {
   return (
     <div>
-      <div className="container-fluid col-12 cheap-flights">
+      <div className="container-fluid col-12 cheap-flights" id={props.id}>
         <div className="row card-slider my-4">
-          <div className="flight-card col-4">
+          <div className="flight-card">
             <div className="card">
               <img src={props.img} className="card-img-top" alt="..." />
 
@@ -25,7 +25,7 @@ function CheapFlightSlider(props) {
               </div>
             </div>
           </div>
-          <div className="flight-card  col-4">
+          {/* <div className="flight-card  col-4">
             <div className="card">
               <img src={props.img} className="card-img-top" alt="..." />
 
@@ -43,9 +43,9 @@ function CheapFlightSlider(props) {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          <div className=" flight-card col-4">
+          {/* <div className=" flight-card col-4">
             <div className="card">
               <img src={props.img} className="card-img-top" alt="..." />
 
@@ -63,7 +63,7 @@ function CheapFlightSlider(props) {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

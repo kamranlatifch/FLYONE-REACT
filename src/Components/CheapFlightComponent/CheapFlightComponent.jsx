@@ -1,10 +1,15 @@
 import React from "react";
-import CheapFlightSlider from "../CheapFlightSlider/CheapFlightSlider";
+import { cheapFlightData } from "../DestinationsJASON/DestinationJason";
 import "./CFComponent.css";
+import CheapFlightSlider from "../CheapFlightSlider/CheapFlightSlider";
 import pic1 from "../Images/Main/1.jpg";
 import pic2 from "../Images/Main/2.jpg";
 import pic3 from "../Images/Main/3.jpg";
 function CheapFlightComponent() {
+  let slider1 = cheapFlightData.slice(0, 3);
+  let slider2 = cheapFlightData.slice(3, 6);
+  let slider3 = cheapFlightData.slice(6, 9);
+  let slider4 = cheapFlightData.slice(9, 12);
   return (
     <>
       <h4>Cheap Flights</h4>
@@ -15,29 +20,41 @@ function CheapFlightComponent() {
       >
         <div className="carousel-inner slider-Div">
           <div className="carousel-item active">
-            <CheapFlightSlider
-              from="Chisinau"
-              to="Laranaca"
-              price="83"
-              img={pic1}
-            />
-          </div>
-          {/* <div className="carousel-item">
-            <CheapFlightSlider
-              from="Chisinau"
-              to="Valancia"
-              price="49"
-              img={pic2}
-            />
+            <div className="row">
+              {slider1.map((item) => (
+                <div className="col-md-4" id="1">
+                  <CheapFlightSlider {...item} />
+                </div>
+              ))}
+            </div>
           </div>
           <div className="carousel-item">
-            <CheapFlightSlider
-              from="Yerevan"
-              to="Laranaca"
-              price="53"
-              img={pic3}
-            />
-          </div> */}
+            <div className="row">
+              {slider2.map((item) => (
+                <div className="col-md-4" id="2">
+                  <CheapFlightSlider {...item} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="row">
+              {slider3.map((item) => (
+                <div className="col-md-4" id="3">
+                  <CheapFlightSlider {...item} />
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="carousel-item">
+            <div className="row">
+              {slider4.map((item) => (
+                <div className="col-md-4" id="4">
+                  <CheapFlightSlider {...item} />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
         <button
           className="carousel-control-prev btn-previous"

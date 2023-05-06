@@ -28,6 +28,9 @@ import ArticlesProhibited from "../BeforeFlight/Security-ArticlesProhibited/Arti
 import Smoking from "../BeforeFlight/Smoking/Smoking";
 import ZeroTolerancePolicy from "../BeforeFlight/ZeroTolerancePolicy/ZeroTolerancePolicy";
 import UnaccompaniedMinor from "../BeforeFlight/UnaccompaniedMinor/UnaccompaniedMinor";
+import AboutCompany from "../AboutFLYONE/AboutCompany/AboutCompany";
+import Fleet from "../AboutFLYONE/Fleet/Fleet";
+import GeneralRules from "../AboutFLYONE/GeneralRules/GeneralRules";
 function AllServices() {
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
@@ -304,10 +307,18 @@ function AllServices() {
                   </h6>
                 </div>
                 {showingDiv === "aboutFLYONE" && (
-                  <div id="aboutFlyoneDiv" className="services">
-                    <a href="/">About Company</a>
-                    <a href="/">Fleet</a>
-                    <a href="/">General Rules</a>
+                  <div
+                    id="aboutFlyoneDiv"
+                    className="services"
+                    style={{ display: "grid" }}
+                  >
+                    <Link to="/en/About-FLYONE/About-company">
+                      About Company
+                    </Link>
+                    <Link to="/en/About-FLYONE/Fleet">Fleet</Link>
+                    <Link to="/en/About-FLYONE/General-Rules">
+                      General Rules
+                    </Link>
                     <a href="/">General Rules FLYONE SRL</a>
                     <a href="/">Careers</a>
                     <a href="/">General Rules FLYONE Armenia</a>
@@ -465,6 +476,9 @@ function AllServices() {
             {replaced === "Smoking" && <Smoking />}
             {replaced === "Zero tolerance policy" && <ZeroTolerancePolicy />}
             {replaced === "Unaccompanied Minor" && <UnaccompaniedMinor />}
+            {replaced === "About company" && <AboutCompany />}
+            {replaced === "Fleet" && <Fleet />}
+            {replaced === "General Rules" && <GeneralRules />}
           </div>
         </div>
       </div>

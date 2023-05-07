@@ -23,7 +23,6 @@ function MenuOnBoard() {
         </h4>
         <br /> <br />
         <h4>
-          {" "}
           <a
             href={Menu3}
             download="Example-PDF-document"

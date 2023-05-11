@@ -1,0 +1,10 @@
+.guideHeader{
+background-color: blue;
+color: white;
+border-radius: 25px;
+padding: 8px;
+    
+}
+.guideHeader h5{
+    margin-left: 10px;
+}

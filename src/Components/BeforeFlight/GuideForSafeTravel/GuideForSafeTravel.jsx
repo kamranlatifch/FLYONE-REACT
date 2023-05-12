@@ -19,18 +19,36 @@ function GuideForSafeTravel() {
           <h5>Trip Planning</h5>
         </div>
       </div>
-      <div className="d-flex my-3">
-        <div className="d-flex">
+      <div className="col-12 d-flex my-3">
+        <div className="col-6 d-flex">
           <img src={tp1} alt="" style={{ width: 70 }} />
           <p style={{ alignSelf: "center", marginLeft: 10 }}>
             Online planning – book tickets on flyone.eu. Select online card
             payment.
           </p>
         </div>
-        <div className="d-flex">
+        <div className="col-6 d-flex">
           <img src={tp2} alt="" style={{ width: 70 }} />
           <p style={{ marginLeft: "10px" }}>
             Check-in online and get the boarding pass on your mobile.
+          </p>
+        </div>
+      </div>
+      <div className="row d-flex my-3">
+        <div className="col-6 d-flex">
+          <img src={tp1} alt="" style={{ width: 70 }} />
+          <p style={{ alignSelf: "center", marginLeft: 10 }}>
+            Be aware that you do not display any symptoms characteristic to
+            COVID-19. Do not go to the airport if you have any of these
+            symptoms.
+          </p>
+        </div>
+        <div className="col-6 d-flex gx-2">
+          <img src={tp2} alt="" style={{ width: 70 }} />
+          <p style={{ alignSelf: "center", marginLeft: 10 }}>
+            &nbsp; Make sure you always have protective masks, gloves and hand
+            sanitizer prepared. Make sure you replace your mask every four
+            hours.
           </p>
         </div>
       </div>

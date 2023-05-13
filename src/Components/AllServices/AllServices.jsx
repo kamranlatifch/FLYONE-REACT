@@ -32,6 +32,7 @@ import AboutCompany from "../AboutFLYONE/AboutCompany/AboutCompany";
 import Fleet from "../AboutFLYONE/Fleet/Fleet";
 import GeneralRules from "../AboutFLYONE/GeneralRules/GeneralRules";
 import Destination from "../Destinations/Destination";
+import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy";
 function AllServices() {
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
@@ -412,11 +413,12 @@ function AllServices() {
               </div>
               <div>
                 <div className="title my-3">
-                  <h6 style={{ marginLeft: 10 }}>
-                    {" "}
-                    <b>Privacy Policy</b>{" "}
-                    <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-                  </h6>
+                  <Link to="/en/Privacy-policy">
+                    <h6 style={{ marginLeft: 10 }}>
+                      Privacy Policy
+                      <i className="fa fa-caret-down" id="ct-up"></i>{" "}
+                    </h6>
+                  </Link>
                 </div>
               </div>
               <div>
@@ -482,6 +484,7 @@ function AllServices() {
             {replaced === "Fleet" && <Fleet />}
             {replaced === "General Rules" && <GeneralRules />}
             {replaced === "Destinations" && <Destination />}
+            {replaced === "Privacy policy" && <PrivacyPolicy />}
           </div>
         </div>
       </div>

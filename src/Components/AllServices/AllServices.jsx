@@ -35,6 +35,7 @@ import Destination from "../Destinations/Destination";
 import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy";
 import Cookies from "./Cookies/Cookies";
 import TermsOfUse from "./TermsOfUse/TermsOfUse";
+import GiftVoucher from "./GiftVoucher/GiftVoucher";
 function AllServices() {
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
@@ -446,10 +447,12 @@ function AllServices() {
               </div>
               <div>
                 <div className="title my-3">
-                  <h6 style={{ marginLeft: 10 }}>
-                    <b>Gift Voucher - Terms and Conditions</b>{" "}
-                    <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-                  </h6>
+                  <Link to="/en/Gift-Voucher-Terms-and-Conditions">
+                    <h6 style={{ marginLeft: 10 }}>
+                      <b>Gift Voucher - Terms and Conditions</b>{" "}
+                      <i className="fa fa-caret-down" id="ct-up"></i>{" "}
+                    </h6>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -491,6 +494,9 @@ function AllServices() {
             {replaced === "Privacy policy" && <PrivacyPolicy />}
             {replaced === "Cookies" && <Cookies />}
             {replaced === "Terms of Use" && <TermsOfUse />}
+            {replaced === "Gift Voucher Terms and Conditions" && (
+              <GiftVoucher />
+            )}
           </div>
         </div>
       </div>

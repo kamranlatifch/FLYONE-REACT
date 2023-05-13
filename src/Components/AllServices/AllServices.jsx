@@ -33,6 +33,7 @@ import Fleet from "../AboutFLYONE/Fleet/Fleet";
 import GeneralRules from "../AboutFLYONE/GeneralRules/GeneralRules";
 import Destination from "../Destinations/Destination";
 import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy";
+import Cookies from "./Cookies/Cookies";
 function AllServices() {
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
@@ -423,11 +424,13 @@ function AllServices() {
               </div>
               <div>
                 <div className="title my-3">
-                  <h6 style={{ marginLeft: 10 }}>
-                    {" "}
-                    <b>Cookies</b>{" "}
-                    <i className="fa fa-caret-down" id="ct-up"></i>{" "}
-                  </h6>
+                  <Link to="/en/Cookies">
+                    <h6 style={{ marginLeft: 10 }}>
+                      {" "}
+                      <b>Cookies</b>{" "}
+                      <i className="fa fa-caret-down" id="ct-up"></i>{" "}
+                    </h6>
+                  </Link>
                 </div>
               </div>
               <div>
@@ -485,6 +488,7 @@ function AllServices() {
             {replaced === "General Rules" && <GeneralRules />}
             {replaced === "Destinations" && <Destination />}
             {replaced === "Privacy policy" && <PrivacyPolicy />}
+            {replaced === "Cookies" && <Cookies />}
           </div>
         </div>
       </div>

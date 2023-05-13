@@ -82,7 +82,7 @@ function PrivacyPolicy() {
         259/2 Grenoble Str.
         <br />
         <br />
-        The aim of data collecting:
+        <b>The aim of data collecting:</b>
         <br />
         <br />
         As you provide us with your personal data, “FLYONE” LLC can use these
@@ -117,7 +117,7 @@ function PrivacyPolicy() {
         request will be disclosed.
         <br />
         <br />
-        Collecting of personal data:
+        <b>Collecting of personal data:</b>
         <br />
         <br />
         Additionally, we collect personal information about you whenever you use
@@ -155,7 +155,7 @@ function PrivacyPolicy() {
         <br />
         <br />
         <br />
-        Policy for transmission of payment card details:
+        <b> Policy for transmission of payment card details:</b>
         <br />
         <br />
         <br />
@@ -163,7 +163,7 @@ function PrivacyPolicy() {
         to third parties.
         <br />
         <br />
-        Use of statistic data and anonymous data:
+        <b>Use of statistic data and anonymous data:</b>
         <br />
         <br />
         “FLYONE” LLC can use statistic and anonymous data as a result of
@@ -177,7 +177,7 @@ function PrivacyPolicy() {
         • Marketing communications/Tailoring the site content
         <br />
         <br />
-        Applicable to passengers to/from France
+        <b>Applicable to passengers to/from France</b>
         <br />
         <br />
         In accordance with Article L 237 -7 of French Homeland Security Code,

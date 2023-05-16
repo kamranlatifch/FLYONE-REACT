@@ -36,6 +36,9 @@ import PrivacyPolicy from "./PrivacyPolicy/PrivacyPolicy";
 import Cookies from "./Cookies/Cookies";
 import TermsOfUse from "./TermsOfUse/TermsOfUse";
 import GiftVoucher from "./GiftVoucher/GiftVoucher";
+import GRSRL from "../AboutFLYONE/GRFLYONESRL/GRSRL";
+import GRArmenia from "../AboutFLYONE/GRFLYONEArmenia/GRArmenia";
+import Careers from "../AboutFLYONE/Careers/Careers";
 function AllServices() {
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
@@ -504,8 +507,9 @@ function AllServices() {
             {replaced === "About company" && <AboutCompany />}
             {replaced === "Fleet" && <Fleet />}
             {replaced === "General Rules" && <GeneralRules />}
-            {replaced === "General Rules SRL" && <GeneralRules />}
-            {replaced === "Careers" && <GeneralRules />}
+            {replaced === "General Rules SRL" && <GRSRL />}
+            {replaced === "Careers" && <Careers />}
+            {replaced === "General Rules Armenia" && <GRArmenia />}
           </div>
         </div>
       </div>

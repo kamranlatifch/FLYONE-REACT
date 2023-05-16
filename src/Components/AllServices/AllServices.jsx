@@ -324,10 +324,14 @@ function AllServices() {
                     <Link to="/en/About-FLYONE/General-Rules">
                       General Rules
                     </Link>
-                    <a href="/">General Rules FLYONE SRL</a>
-                    <a href="/">Careers</a>
-                    <a href="/">General Rules FLYONE Armenia</a>
-                    <a href="/">News</a>
+                    <Link to="/en/About-FLYONE/General-Rules-SRL">
+                      General Rules FLYONE SRL{" "}
+                    </Link>
+                    <Link to="/en/About-FLYONE/Careers">Careers</Link>
+                    <Link to="/en/About-FLYONE/General-Rules-Armenia">
+                      General Rules FLYONE Armenia
+                    </Link>
+                    <Link to="/en/About-FLYONE/News">News</Link>
                   </div>
                 )}
               </div>
@@ -497,6 +501,11 @@ function AllServices() {
             {replaced === "Gift Voucher Terms and Conditions" && (
               <GiftVoucher />
             )}
+            {replaced === "About company" && <AboutCompany />}
+            {replaced === "Fleet" && <Fleet />}
+            {replaced === "General Rules" && <GeneralRules />}
+            {replaced === "General Rules SRL" && <GeneralRules />}
+            {replaced === "Careers" && <GeneralRules />}
           </div>
         </div>
       </div>

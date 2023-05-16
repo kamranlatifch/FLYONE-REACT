@@ -39,6 +39,7 @@ import GiftVoucher from "./GiftVoucher/GiftVoucher";
 import GRSRL from "../AboutFLYONE/GRFLYONESRL/GRSRL";
 import GRArmenia from "../AboutFLYONE/GRFLYONEArmenia/GRArmenia";
 import Careers from "../AboutFLYONE/Careers/Careers";
+import News from "../AboutFLYONE/News/News";
 function AllServices() {
   const [title, setTitle] = useState("hide");
   const [showingDiv, setShowingDiv] = useState("");
@@ -510,6 +511,7 @@ function AllServices() {
             {replaced === "General Rules SRL" && <GRSRL />}
             {replaced === "Careers" && <Careers />}
             {replaced === "General Rules Armenia" && <GRArmenia />}
+            {replaced === "News" && <News />}
           </div>
         </div>
       </div>
